@@ -31,7 +31,7 @@
 &kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                               &none      &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
 &kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none        &kp LCTRL      &kp LALT      &kp LGUI   &kp RCTRL      &none      &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                               &kp HOME      &kp PG_UP                            &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &lt 2 ENTER  &hm LCTRL TAB  &kp END       &kp PG_DN  &kp BACKSPACE  &lt 2 SPACE        &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
+&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &lt 2 ENTER  &hm LCTRL TAB  &kp END       &kp PG_DN  &lt 4 BACKSPACE  &lt 2 SPACE        &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
             >;
         };
 
@@ -51,8 +51,8 @@
             bindings = <
 &kp F1           &kp F2          &kp F3         &kp F4          &kp F5          &kp F6          &tog 1                                                              &mo 3           &kp F7          &kp F8          &kp F9          &kp F10         &kp F11         &kp F12
 &kp GRAVE        &kp EXCL        &kp AT         &kp HASH        &kp DOLLAR      &kp PRCNT       &none                                                               &none           &kp CARET       &kp AMPS        &kp ASTERISK    &kp PLUS        &kp EQUAL       &kp F12
-&kp DEL          &trans          &kp LBRC       &kp LBKT        &kp LPAR        &macro_colon_eq &none        &trans          &trans          &trans          &trans          &none           &kp EQUAL       &kp RPAR        &kp RBKT        &kp RBRC        &kp PIPE        &kp DQT
-&trans           &trans          &trans         &macro_neq      &macro_pluseq   &kp LESS_THAN                                   &trans          &trans                                          &kp GREATER_THAN &macro_slashdot &macro_eqdotdot &trans          &trans          &kp CAPS
+&trans           &trans          &kp LBRC       &kp LBKT        &kp LPAR        &trans          &none        &trans          &trans          &trans          &trans          &none           &kp EQUAL       &kp RPAR        &kp RBKT        &kp RBRC        &kp PIPE        &kp DQT
+&kp DEL          &trans          &trans         &trans          &trans          &kp LESS_THAN                                   &trans          &trans                                          &kp GREATER_THAN &trans          &trans          &trans          &trans          &kp DEL
 &trans           &trans          &trans         &trans          &trans                          &trans       &trans          &trans          &trans          &trans          &trans                          &trans          &trans          &trans          &trans          &trans
             >;
         };
@@ -69,8 +69,14 @@
         };
 
         extra1 {
-            display-name = "Red";
-            status = "reserved";
+            display-name = "Nav";
+            bindings = <
+&trans           &trans          &trans         &trans          &trans          &trans          &trans                                                              &trans          &trans          &kp LBKT        &kp RBKT        &kp LBRC        &kp RBRC        &bootloader
+&kp TILDE        &trans          &trans         &trans          &trans          &trans          &none                                                               &none           &kp PG_UP       &kp HOME        &kp UP          &kp END         &trans          &trans
+&trans           &trans          &trans         &trans          &trans          &trans          &none        &trans          &trans          &trans          &trans          &none           &kp PG_DN       &kp LEFT        &kp DOWN        &kp RIGHT       &trans          &trans
+&trans           &trans          &trans         &trans          &trans          &trans                                          &trans          &trans                                          &kp LC(LS(TAB)) &kp LC(TAB)     &trans          &trans          &trans          &trans
+&trans           &trans          &trans         &trans          &trans                          &trans       &trans          &trans          &trans          &trans          &trans                          &trans          &trans          &trans          &trans          &trans
+            >;
         };
 
         extra2 {

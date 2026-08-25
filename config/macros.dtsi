@@ -222,38 +222,3 @@
     bindings = <&mkp MB1 &mkp MB1>;
     display-name = "Double Click";
   };
-
-  macro_colon_eq: macro_colon_eq {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&kp LS(SEMI) &kp EQUAL>;
-    display-name = "Programming :=";
-  };
-
-  macro_neq: macro_neq {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&kp LS(N1) &kp EQUAL>;
-    display-name = "Programming !=";
-  };
-
-  macro_pluseq: macro_pluseq {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&kp PLUS &kp EQUAL>;
-    display-name = "Programming +=";
-  };
-
-  macro_slashdot: macro_slashdot {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&kp FSLH &kp LS(DOT)>;
-    display-name = "Programming /.";
-  };
-
-  macro_eqdotdot: macro_eqdotdot {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&kp EQUAL &macro_wait_time 100 &kp LS(DOT)>;
-    display-name = "Programming =..";
-  };
